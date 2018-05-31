@@ -29,12 +29,12 @@ class Student
   end
 
   def save
-
     sql = "INSERT INTO students (name, grade) VALUES (?, ?)"
     DB[:conn].execute(sql, self.name, self.grade)
     result = DB[:conn].execute("SELECT * FROM students")
-    self.id = result.last[0]
     binding.pry
+    self.id = result.last[0]
+    
   end
 
   def self.create(attributes)

@@ -36,6 +36,5 @@ class Student
     binding.pry
     student = self.new(attributes[:name], attributes[:grade])
     student.save
-    DB[:conn].execute("SELECT * FROM students")
   end
 end

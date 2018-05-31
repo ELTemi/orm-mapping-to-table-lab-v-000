@@ -33,7 +33,7 @@ class Student
   end
 
   def self.create(name: name, grade: grade)
-    binding.pry
+  #  binding.pry
     attrubutes = {name: name, grade: grade}
     attributes.each do |key, value|
       self.send(("#{key}="), value)

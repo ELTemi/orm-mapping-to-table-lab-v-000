@@ -35,7 +35,7 @@ class Student
   def self.create(attributes)
     student = self.new
     attributes.each do |key, value|
-      self.send(("#{key}="), value)
+      student.send(("#{key}="), value)
     end
     DB[:conn].execute("SELECT * FROM students")
   end

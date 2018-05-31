@@ -34,7 +34,7 @@ class Student
 
   def self.create(name:, grade:)
     attributes = {name:, grade:}
-    .each do |key, value|
+    attrubutes.each do |key, value|
       self.send(("#{key}="), value)
     end
   end

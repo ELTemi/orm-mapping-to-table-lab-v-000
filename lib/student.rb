@@ -34,7 +34,7 @@ class Student
     result = DB[:conn].execute("SELECT * FROM students")
     binding.pry
     self.id = result.last[0]
-    
+
   end
 
   def self.create(attributes)

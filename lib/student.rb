@@ -32,7 +32,9 @@ class Student
     DB[:conn].execute("INSERT INTO students (name, grade) VALUES (#{self.name}, #{self.grade})")
   end
 
-  def self.create(name:, grade:)
-    
+  def self.create({name:, grade:})
+    {name:, grade:}.each {|key, value|self.send(("#{key}="), value)}
+    self.new(name, grade)
+
   end
 end

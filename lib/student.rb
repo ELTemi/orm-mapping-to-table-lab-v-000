@@ -35,6 +35,7 @@ class Student
   def self.create({name:, grade:})
     student = self.new
     {name:, grade:}.each do |key, value|
+      binding.pry
       student.send(("#{key}="), value)
     end
     DB[:conn].execute("SELECT * FROM students")

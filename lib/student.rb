@@ -14,7 +14,7 @@ class Student
         CREATE TABLE IF NOT EXISTS students (
           id INTEGER PRIMARY KEY,
           name TEXT,
-          grade INTEGER
+          grade TEXT
           )
           SQL
       DB[:conn].execute(sql)
@@ -29,6 +29,6 @@ class Student
 
   def save
     #binding.pry
-    DB[:conn].execute("INSERT INTO students (name) VALUES (#{self.name})")
+    DB[:conn].execute("INSERT INTO students (name, grade)")
   end
 end

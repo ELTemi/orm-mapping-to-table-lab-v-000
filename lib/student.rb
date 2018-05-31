@@ -32,8 +32,8 @@ class Student
     sql = "INSERT INTO students (name, grade) VALUES (?, ?)"
     DB[:conn].execute(sql, self.name, self.grade)
     result = DB[:conn].execute("SELECT * FROM students")
-    binding.pry
-    self.id = result.last[0]
+    #binding.pry
+    @id = result.last[0]
 
   end
 

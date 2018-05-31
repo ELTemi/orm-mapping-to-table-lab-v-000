@@ -36,5 +36,6 @@ class Student
     binding.pry
     student = self.new(attributes[:name], attributes[:grade])
     student.save
+    student
   end
 end

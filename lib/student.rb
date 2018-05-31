@@ -35,7 +35,7 @@ class Student
   def self.create({name:, grade:})
     student = self.new
     binding.pry
-    {name:, grade:}.each do |key, value|
+    {name: grade:}.each do |key, value|
       binding.pry
       student.send(("#{key}="), value)
     end
